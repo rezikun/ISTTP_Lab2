@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClubsByLeague.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClubsByLeague.Designer.cs">
+      <DependentUpon>ClubsByLeague.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBUIForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchDialog.Designer.cs">
+      <DependentUpon>SearchDialog.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ClubsByLeague.resx">
+      <DependentUpon>ClubsByLeague.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DBUIForm.resx">
       <DependentUpon>DBUIForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -73,8 +88,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SearchDialog.resx">
+      <DependentUpon>SearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\FCDataEF.Club.datasource" />
+    <None Include="Properties\DataSources\FCDataEF.Contract.datasource" />
+    <None Include="Properties\DataSources\FCDataEF.Country.datasource" />
+    <None Include="Properties\DataSources\FCDataEF.Federation.datasource" />
+    <None Include="Properties\DataSources\FCDataEF.League.datasource" />
+    <None Include="Properties\DataSources\FCDataEF.Player.datasource" />
+    <None Include="Properties\DataSources\FCDataEF.Title.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

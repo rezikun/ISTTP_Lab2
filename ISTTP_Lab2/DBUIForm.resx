@@ -117,18 +117,132 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="titlesDeleteBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="titlesDeleteBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1056, 18</value>
+  </data>
+  <data name="titlesDeleteBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 39</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="titlesDeleteBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="titlesDeleteBtn.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="&gt;&gt;titlesDeleteBtn.Name" xml:space="preserve">
+    <value>titlesDeleteBtn</value>
+  </data>
+  <data name="&gt;&gt;titlesDeleteBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;titlesDeleteBtn.Parent" xml:space="preserve">
+    <value>tabTitles</value>
+  </data>
+  <data name="&gt;&gt;titlesDeleteBtn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="titlesSaveBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="titlesSaveBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>868, 18</value>
+  </data>
+  <data name="titlesSaveBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 39</value>
+  </data>
+  <data name="titlesSaveBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="titlesSaveBtn.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;titlesSaveBtn.Name" xml:space="preserve">
+    <value>titlesSaveBtn</value>
+  </data>
+  <data name="&gt;&gt;titlesSaveBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;titlesSaveBtn.Parent" xml:space="preserve">
+    <value>tabTitles</value>
+  </data>
+  <data name="&gt;&gt;titlesSaveBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dGVTitles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="titleNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Title Name</value>
+  </data>
+  <metadata name="federationBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>2067, 17</value>
+  </metadata>
+  <data name="federationIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Federation</value>
+  </data>
+  <data name="clubHasTitlesDataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>ClubHasTitles</value>
+  </data>
+  <data name="clubHasTitlesDataGridViewTextBoxColumn1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="federationDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Federation</value>
+  </data>
+  <data name="federationDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="playerHasTitlesDataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>PlayerHasTitles</value>
+  </data>
+  <data name="playerHasTitlesDataGridViewTextBoxColumn1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="titleIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>TitleID</value>
+  </data>
+  <data name="titleIDDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <metadata name="titleBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1796, 17</value>
+  </metadata>
+  <data name="dGVTitles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 75</value>
+  </data>
+  <data name="dGVTitles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1246, 580</value>
+  </data>
+  <data name="dGVTitles.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dGVTitles.Name" xml:space="preserve">
+    <value>dGVTitles</value>
+  </data>
+  <data name="&gt;&gt;dGVTitles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dGVTitles.Parent" xml:space="preserve">
+    <value>tabTitles</value>
+  </data>
+  <data name="&gt;&gt;dGVTitles.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="tabTitles.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 39</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tabTitles.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabTitles.Size" type="System.Drawing.Size, System.Drawing">
     <value>1258, 661</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tabTitles.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -145,6 +259,123 @@
     <value>mainTabControl</value>
   </data>
   <data name="&gt;&gt;tabTitles.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="playersDeleteBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="playersDeleteBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1044, 16</value>
+  </data>
+  <data name="playersDeleteBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 39</value>
+  </data>
+  <data name="playersDeleteBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="playersDeleteBtn.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="&gt;&gt;playersDeleteBtn.Name" xml:space="preserve">
+    <value>playersDeleteBtn</value>
+  </data>
+  <data name="&gt;&gt;playersDeleteBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;playersDeleteBtn.Parent" xml:space="preserve">
+    <value>tabPlayers</value>
+  </data>
+  <data name="&gt;&gt;playersDeleteBtn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="playersSaveBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="playersSaveBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>856, 16</value>
+  </data>
+  <data name="playersSaveBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 39</value>
+  </data>
+  <data name="playersSaveBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="playersSaveBtn.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;playersSaveBtn.Name" xml:space="preserve">
+    <value>playersSaveBtn</value>
+  </data>
+  <data name="&gt;&gt;playersSaveBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;playersSaveBtn.Parent" xml:space="preserve">
+    <value>tabPlayers</value>
+  </data>
+  <data name="&gt;&gt;playersSaveBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dGVPlayers.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="playerNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Player Name</value>
+  </data>
+  <data name="dateOfBirthDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Date Of Birth</value>
+  </data>
+  <metadata name="contractBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1477, 17</value>
+  </metadata>
+  <data name="contractIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Has Contract With</value>
+  </data>
+  <data name="contractIDDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="heightCMDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Height in cm</value>
+  </data>
+  <data name="contractsDataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>Contracts</value>
+  </data>
+  <data name="contractsDataGridViewTextBoxColumn1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="playerHasTitlesDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>PlayerHasTitles</value>
+  </data>
+  <data name="playerHasTitlesDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="playerIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>PlayerID</value>
+  </data>
+  <data name="playerIDDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <metadata name="playerBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1181, 17</value>
+  </metadata>
+  <data name="dGVPlayers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 75</value>
+  </data>
+  <data name="dGVPlayers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1246, 580</value>
+  </data>
+  <data name="dGVPlayers.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dGVPlayers.Name" xml:space="preserve">
+    <value>dGVPlayers</value>
+  </data>
+  <data name="&gt;&gt;dGVPlayers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dGVPlayers.Parent" xml:space="preserve">
+    <value>tabPlayers</value>
+  </data>
+  <data name="&gt;&gt;dGVPlayers.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="tabPlayers.Location" type="System.Drawing.Point, System.Drawing">
@@ -174,6 +405,156 @@
   <data name="&gt;&gt;tabPlayers.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="clubsSearchBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>647, 15</value>
+  </data>
+  <data name="clubsSearchBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 39</value>
+  </data>
+  <data name="clubsSearchBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="clubsSearchBtn.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="&gt;&gt;clubsSearchBtn.Name" xml:space="preserve">
+    <value>clubsSearchBtn</value>
+  </data>
+  <data name="&gt;&gt;clubsSearchBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clubsSearchBtn.Parent" xml:space="preserve">
+    <value>tabClubs</value>
+  </data>
+  <data name="&gt;&gt;clubsSearchBtn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="deleteClubBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="deleteClubBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1023, 15</value>
+  </data>
+  <data name="deleteClubBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 39</value>
+  </data>
+  <data name="deleteClubBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="deleteClubBtn.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="&gt;&gt;deleteClubBtn.Name" xml:space="preserve">
+    <value>deleteClubBtn</value>
+  </data>
+  <data name="&gt;&gt;deleteClubBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deleteClubBtn.Parent" xml:space="preserve">
+    <value>tabClubs</value>
+  </data>
+  <data name="&gt;&gt;deleteClubBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="saveClubBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="saveClubBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>835, 15</value>
+  </data>
+  <data name="saveClubBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 39</value>
+  </data>
+  <data name="saveClubBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="saveClubBtn.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;saveClubBtn.Name" xml:space="preserve">
+    <value>saveClubBtn</value>
+  </data>
+  <data name="&gt;&gt;saveClubBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveClubBtn.Parent" xml:space="preserve">
+    <value>tabClubs</value>
+  </data>
+  <data name="&gt;&gt;saveClubBtn.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="dGVClubs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="clubIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>ClubID</value>
+  </data>
+  <data name="clubIDDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="clubNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Club Name</value>
+  </data>
+  <data name="locationDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="descriptionDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="yearOfFoundationDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Year Of Foundation</value>
+  </data>
+  <metadata name="leagueBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>567, 17</value>
+  </metadata>
+  <data name="leagueIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>League Name</value>
+  </data>
+  <data name="leagueIDDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>176</value>
+  </data>
+  <data name="clubHasTitlesDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>ClubHasTitles</value>
+  </data>
+  <data name="clubHasTitlesDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="leagueDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>League</value>
+  </data>
+  <data name="leagueDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="contractsDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Contracts</value>
+  </data>
+  <data name="contractsDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <metadata name="clubBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>292, 17</value>
+  </metadata>
+  <data name="dGVClubs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 75</value>
+  </data>
+  <data name="dGVClubs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1246, 580</value>
+  </data>
+  <data name="dGVClubs.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dGVClubs.Name" xml:space="preserve">
+    <value>dGVClubs</value>
+  </data>
+  <data name="&gt;&gt;dGVClubs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dGVClubs.Parent" xml:space="preserve">
+    <value>tabClubs</value>
+  </data>
+  <data name="&gt;&gt;dGVClubs.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="tabClubs.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 39</value>
   </data>
@@ -201,11 +582,149 @@
   <data name="&gt;&gt;tabClubs.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="clubBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="mainTabControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="leaguesDeleteBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="leaguesDeleteBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1064, 18</value>
+  </data>
+  <data name="leaguesDeleteBtn.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="leaguesDeleteBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 39</value>
+  </data>
+  <data name="leaguesDeleteBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="leaguesDeleteBtn.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="&gt;&gt;leaguesDeleteBtn.Name" xml:space="preserve">
+    <value>leaguesDeleteBtn</value>
+  </data>
+  <data name="&gt;&gt;leaguesDeleteBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;leaguesDeleteBtn.Parent" xml:space="preserve">
+    <value>tabLeagues</value>
+  </data>
+  <data name="&gt;&gt;leaguesDeleteBtn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="leaguesSaveBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="leaguesSaveBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>876, 18</value>
+  </data>
+  <data name="leaguesSaveBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 39</value>
+  </data>
+  <data name="leaguesSaveBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="leaguesSaveBtn.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;leaguesSaveBtn.Name" xml:space="preserve">
+    <value>leaguesSaveBtn</value>
+  </data>
+  <data name="&gt;&gt;leaguesSaveBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;leaguesSaveBtn.Parent" xml:space="preserve">
+    <value>tabLeagues</value>
+  </data>
+  <data name="&gt;&gt;leaguesSaveBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dataGridView1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="leagueNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>League Name</value>
+  </data>
+  <data name="leagueLevelDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>League Level</value>
+  </data>
+  <metadata name="countryBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>869, 17</value>
+  </metadata>
+  <data name="countryIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="numberOfCLPlacesDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Number Of CL Places</value>
+  </data>
+  <data name="clubsDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Clubs</value>
+  </data>
+  <data name="clubsDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="countryDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="countryDataGridViewTextBoxColumn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="leagueIDDataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>LeagueID</value>
+  </data>
+  <data name="leagueIDDataGridViewTextBoxColumn1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 75</value>
+  </data>
+  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1246, 580</value>
+  </data>
+  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
+    <value>dataGridView1</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
+    <value>tabLeagues</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabLeagues.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 39</value>
+  </data>
+  <data name="tabLeagues.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabLeagues.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1258, 661</value>
+  </data>
+  <data name="tabLeagues.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabLeagues.Text" xml:space="preserve">
+    <value>Leagues</value>
+  </data>
+  <data name="&gt;&gt;tabLeagues.Name" xml:space="preserve">
+    <value>tabLeagues</value>
+  </data>
+  <data name="&gt;&gt;tabLeagues.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabLeagues.Parent" xml:space="preserve">
+    <value>mainTabControl</value>
+  </data>
+  <data name="&gt;&gt;tabLeagues.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="mainTabControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
@@ -240,11 +759,221 @@
   <data name="$this.Text" xml:space="preserve">
     <value>DBUI</value>
   </data>
+  <data name="&gt;&gt;titleNameDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>titleNameDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;titleNameDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;federationIDDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>federationIDDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;federationIDDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewComboBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;federationBindingSource.Name" xml:space="preserve">
+    <value>federationBindingSource</value>
+  </data>
+  <data name="&gt;&gt;federationBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clubHasTitlesDataGridViewTextBoxColumn1.Name" xml:space="preserve">
+    <value>clubHasTitlesDataGridViewTextBoxColumn1</value>
+  </data>
+  <data name="&gt;&gt;clubHasTitlesDataGridViewTextBoxColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;federationDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>federationDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;federationDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;playerHasTitlesDataGridViewTextBoxColumn1.Name" xml:space="preserve">
+    <value>playerHasTitlesDataGridViewTextBoxColumn1</value>
+  </data>
+  <data name="&gt;&gt;playerHasTitlesDataGridViewTextBoxColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;titleIDDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>titleIDDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;titleIDDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;titleBindingSource.Name" xml:space="preserve">
+    <value>titleBindingSource</value>
+  </data>
+  <data name="&gt;&gt;titleBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;playerNameDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>playerNameDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;playerNameDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dateOfBirthDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>dateOfBirthDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;dateOfBirthDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;contractIDDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>contractIDDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;contractIDDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewComboBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;contractBindingSource.Name" xml:space="preserve">
+    <value>contractBindingSource</value>
+  </data>
+  <data name="&gt;&gt;contractBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;heightCMDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>heightCMDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;heightCMDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;contractsDataGridViewTextBoxColumn1.Name" xml:space="preserve">
+    <value>contractsDataGridViewTextBoxColumn1</value>
+  </data>
+  <data name="&gt;&gt;contractsDataGridViewTextBoxColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;playerHasTitlesDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>playerHasTitlesDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;playerHasTitlesDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;playerIDDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>playerIDDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;playerIDDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;playerBindingSource.Name" xml:space="preserve">
+    <value>playerBindingSource</value>
+  </data>
+  <data name="&gt;&gt;playerBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clubIDDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>clubIDDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;clubIDDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clubNameDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>clubNameDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;clubNameDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;locationDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>locationDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;locationDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;descriptionDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>descriptionDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;descriptionDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;yearOfFoundationDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>yearOfFoundationDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;yearOfFoundationDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;leagueIDDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>leagueIDDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;leagueIDDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewComboBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;leagueBindingSource.Name" xml:space="preserve">
+    <value>leagueBindingSource</value>
+  </data>
+  <data name="&gt;&gt;leagueBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clubHasTitlesDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>clubHasTitlesDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;clubHasTitlesDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;leagueDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>leagueDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;leagueDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;contractsDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>contractsDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;contractsDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;clubBindingSource.Name" xml:space="preserve">
     <value>clubBindingSource</value>
   </data>
   <data name="&gt;&gt;clubBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;leagueNameDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>leagueNameDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;leagueNameDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;leagueLevelDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>leagueLevelDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;leagueLevelDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;countryIDDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>countryIDDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;countryIDDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewComboBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;countryBindingSource.Name" xml:space="preserve">
+    <value>countryBindingSource</value>
+  </data>
+  <data name="&gt;&gt;countryBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numberOfCLPlacesDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>numberOfCLPlacesDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;numberOfCLPlacesDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clubsDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>clubsDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;clubsDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;countryDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>countryDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;countryDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;leagueIDDataGridViewTextBoxColumn1.Name" xml:space="preserve">
+    <value>leagueIDDataGridViewTextBoxColumn1</value>
+  </data>
+  <data name="&gt;&gt;leagueIDDataGridViewTextBoxColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>DBUIForm</value>
