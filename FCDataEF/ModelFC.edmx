@@ -1,0 +1,658 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DBFClubsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ClubHasTitle">
+          <Key>
+            <PropertyRef Name="ClubAndTitleID" />
+          </Key>
+          <Property Name="ClubAndTitleID" Type="int" Nullable="false" />
+          <Property Name="ClubID" Type="int" Nullable="false" />
+          <Property Name="TitleID" Type="int" Nullable="false" />
+          <Property Name="DateOfAcquisition" Type="varchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Clubs">
+          <Key>
+            <PropertyRef Name="ClubID" />
+          </Key>
+          <Property Name="ClubID" Type="int" Nullable="false" />
+          <Property Name="ClubName" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Location" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="YearOfFoundation" Type="nchar" MaxLength="10" />
+          <Property Name="LeagueID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contracts">
+          <Key>
+            <PropertyRef Name="ContractID" />
+          </Key>
+          <Property Name="ContractID" Type="int" Nullable="false" />
+          <Property Name="ClubID" Type="int" Nullable="false" />
+          <Property Name="PlayerID" Type="int" Nullable="false" />
+          <Property Name="ValidUntill" Type="date" />
+          <Property Name="ValidFrom" Type="date" />
+          <Property Name="AnnualSalary" Type="decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="Countries">
+          <Key>
+            <PropertyRef Name="CountryID" />
+          </Key>
+          <Property Name="CountryID" Type="int" Nullable="false" />
+          <Property Name="Countryname" Type="nchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Federations">
+          <Key>
+            <PropertyRef Name="FederationID" />
+          </Key>
+          <Property Name="FederationID" Type="int" Nullable="false" />
+          <Property Name="FederationName" Type="nchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Leagues">
+          <Key>
+            <PropertyRef Name="LeagueID" />
+          </Key>
+          <Property Name="LeagueID" Type="int" Nullable="false" />
+          <Property Name="LeagueName" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="LeagueLevel" Type="smallint" Nullable="false" />
+          <Property Name="CountryID" Type="int" Nullable="false" />
+          <Property Name="NumberOfCLPlaces" Type="int" />
+        </EntityType>
+        <EntityType Name="PlayerHasTitle">
+          <Key>
+            <PropertyRef Name="PlayerAndTitleID" />
+          </Key>
+          <Property Name="PlayerAndTitleID" Type="int" Nullable="false" />
+          <Property Name="PlayerID" Type="int" Nullable="false" />
+          <Property Name="TitleID" Type="int" Nullable="false" />
+          <Property Name="DateOfAcquisition" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Players">
+          <Key>
+            <PropertyRef Name="PlayerID" />
+          </Key>
+          <Property Name="PlayerID" Type="int" Nullable="false" />
+          <Property Name="PlayerName" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="DateOfBirth" Type="date" Nullable="false" />
+          <Property Name="ContractID" Type="int" />
+          <Property Name="HeightCM" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Titles">
+          <Key>
+            <PropertyRef Name="TitleID" />
+          </Key>
+          <Property Name="TitleID" Type="int" Nullable="false" />
+          <Property Name="TitleName" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="FederationID" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ClubHasTitle_Club">
+          <End Role="Clubs" Type="Self.Clubs" Multiplicity="1" />
+          <End Role="ClubHasTitle" Type="Self.ClubHasTitle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clubs">
+              <PropertyRef Name="ClubID" />
+            </Principal>
+            <Dependent Role="ClubHasTitle">
+              <PropertyRef Name="ClubID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClubHasTitle_Title">
+          <End Role="Titles" Type="Self.Titles" Multiplicity="1" />
+          <End Role="ClubHasTitle" Type="Self.ClubHasTitle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Titles">
+              <PropertyRef Name="TitleID" />
+            </Principal>
+            <Dependent Role="ClubHasTitle">
+              <PropertyRef Name="TitleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Clubs_Leagues">
+          <End Role="Leagues" Type="Self.Leagues" Multiplicity="1" />
+          <End Role="Clubs" Type="Self.Clubs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Leagues">
+              <PropertyRef Name="LeagueID" />
+            </Principal>
+            <Dependent Role="Clubs">
+              <PropertyRef Name="LeagueID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contracts_Clubs">
+          <End Role="Clubs" Type="Self.Clubs" Multiplicity="1" />
+          <End Role="Contracts" Type="Self.Contracts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clubs">
+              <PropertyRef Name="ClubID" />
+            </Principal>
+            <Dependent Role="Contracts">
+              <PropertyRef Name="ClubID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contracts_Players">
+          <End Role="Players" Type="Self.Players" Multiplicity="1" />
+          <End Role="Contracts" Type="Self.Contracts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Players">
+              <PropertyRef Name="PlayerID" />
+            </Principal>
+            <Dependent Role="Contracts">
+              <PropertyRef Name="PlayerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Leagues_Countries">
+          <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+          <End Role="Leagues" Type="Self.Leagues" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Countries">
+              <PropertyRef Name="CountryID" />
+            </Principal>
+            <Dependent Role="Leagues">
+              <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PlayerHasTitle_Player">
+          <End Role="Players" Type="Self.Players" Multiplicity="1" />
+          <End Role="PlayerHasTitle" Type="Self.PlayerHasTitle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Players">
+              <PropertyRef Name="PlayerID" />
+            </Principal>
+            <Dependent Role="PlayerHasTitle">
+              <PropertyRef Name="PlayerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PlayerHasTitle_Title">
+          <End Role="Titles" Type="Self.Titles" Multiplicity="1" />
+          <End Role="PlayerHasTitle" Type="Self.PlayerHasTitle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Titles">
+              <PropertyRef Name="TitleID" />
+            </Principal>
+            <Dependent Role="PlayerHasTitle">
+              <PropertyRef Name="TitleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Titles_Federation">
+          <End Role="Federations" Type="Self.Federations" Multiplicity="1" />
+          <End Role="Titles" Type="Self.Titles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Federations">
+              <PropertyRef Name="FederationID" />
+            </Principal>
+            <Dependent Role="Titles">
+              <PropertyRef Name="FederationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DBFClubsModelStoreContainer">
+          <EntitySet Name="ClubHasTitle" EntityType="Self.ClubHasTitle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Clubs" EntityType="Self.Clubs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contracts" EntityType="Self.Contracts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Countries" EntityType="Self.Countries" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Federations" EntityType="Self.Federations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Leagues" EntityType="Self.Leagues" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PlayerHasTitle" EntityType="Self.PlayerHasTitle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Players" EntityType="Self.Players" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Titles" EntityType="Self.Titles" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ClubHasTitle_Club" Association="Self.FK_ClubHasTitle_Club">
+            <End Role="Clubs" EntitySet="Clubs" />
+            <End Role="ClubHasTitle" EntitySet="ClubHasTitle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClubHasTitle_Title" Association="Self.FK_ClubHasTitle_Title">
+            <End Role="Titles" EntitySet="Titles" />
+            <End Role="ClubHasTitle" EntitySet="ClubHasTitle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Clubs_Leagues" Association="Self.FK_Clubs_Leagues">
+            <End Role="Leagues" EntitySet="Leagues" />
+            <End Role="Clubs" EntitySet="Clubs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contracts_Clubs" Association="Self.FK_Contracts_Clubs">
+            <End Role="Clubs" EntitySet="Clubs" />
+            <End Role="Contracts" EntitySet="Contracts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contracts_Players" Association="Self.FK_Contracts_Players">
+            <End Role="Players" EntitySet="Players" />
+            <End Role="Contracts" EntitySet="Contracts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Leagues_Countries" Association="Self.FK_Leagues_Countries">
+            <End Role="Countries" EntitySet="Countries" />
+            <End Role="Leagues" EntitySet="Leagues" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PlayerHasTitle_Player" Association="Self.FK_PlayerHasTitle_Player">
+            <End Role="Players" EntitySet="Players" />
+            <End Role="PlayerHasTitle" EntitySet="PlayerHasTitle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PlayerHasTitle_Title" Association="Self.FK_PlayerHasTitle_Title">
+            <End Role="Titles" EntitySet="Titles" />
+            <End Role="PlayerHasTitle" EntitySet="PlayerHasTitle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Titles_Federation" Association="Self.FK_Titles_Federation">
+            <End Role="Federations" EntitySet="Federations" />
+            <End Role="Titles" EntitySet="Titles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBFClubsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ClubHasTitle">
+          <Key>
+            <PropertyRef Name="ClubAndTitleID" />
+          </Key>
+          <Property Name="ClubAndTitleID" Type="Int32" Nullable="false" />
+          <Property Name="ClubID" Type="Int32" Nullable="false" />
+          <Property Name="TitleID" Type="Int32" Nullable="false" />
+          <Property Name="DateOfAcquisition" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Club" Relationship="Self.FK_ClubHasTitle_Club" FromRole="ClubHasTitle" ToRole="Clubs" />
+          <NavigationProperty Name="Title" Relationship="Self.FK_ClubHasTitle_Title" FromRole="ClubHasTitle" ToRole="Titles" />
+        </EntityType>
+        <EntityType Name="Club">
+          <Key>
+            <PropertyRef Name="ClubID" />
+          </Key>
+          <Property Name="ClubID" Type="Int32" Nullable="false" />
+          <Property Name="ClubName" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Location" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="YearOfFoundation" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="LeagueID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ClubHasTitles" Relationship="Self.FK_ClubHasTitle_Club" FromRole="Clubs" ToRole="ClubHasTitle" />
+          <NavigationProperty Name="League" Relationship="Self.FK_Clubs_Leagues" FromRole="Clubs" ToRole="Leagues" />
+          <NavigationProperty Name="Contracts" Relationship="Self.FK_Contracts_Clubs" FromRole="Clubs" ToRole="Contracts" />
+        </EntityType>
+        <EntityType Name="Contract">
+          <Key>
+            <PropertyRef Name="ContractID" />
+          </Key>
+          <Property Name="ContractID" Type="Int32" Nullable="false" />
+          <Property Name="ClubID" Type="Int32" Nullable="false" />
+          <Property Name="PlayerID" Type="Int32" Nullable="false" />
+          <Property Name="ValidUntill" Type="DateTime" Precision="0" />
+          <Property Name="ValidFrom" Type="DateTime" Precision="0" />
+          <Property Name="AnnualSalary" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="Club" Relationship="Self.FK_Contracts_Clubs" FromRole="Contracts" ToRole="Clubs" />
+          <NavigationProperty Name="Player" Relationship="Self.FK_Contracts_Players" FromRole="Contracts" ToRole="Players" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryID" />
+          </Key>
+          <Property Name="CountryID" Type="Int32" Nullable="false" />
+          <Property Name="Countryname" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Leagues" Relationship="Self.FK_Leagues_Countries" FromRole="Countries" ToRole="Leagues" />
+        </EntityType>
+        <EntityType Name="Federation">
+          <Key>
+            <PropertyRef Name="FederationID" />
+          </Key>
+          <Property Name="FederationID" Type="Int32" Nullable="false" />
+          <Property Name="FederationName" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Titles" Relationship="Self.FK_Titles_Federation" FromRole="Federations" ToRole="Titles" />
+        </EntityType>
+        <EntityType Name="League">
+          <Key>
+            <PropertyRef Name="LeagueID" />
+          </Key>
+          <Property Name="LeagueID" Type="Int32" Nullable="false" />
+          <Property Name="LeagueName" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="LeagueLevel" Type="Int16" Nullable="false" />
+          <Property Name="CountryID" Type="Int32" Nullable="false" />
+          <Property Name="NumberOfCLPlaces" Type="Int32" />
+          <NavigationProperty Name="Clubs" Relationship="Self.FK_Clubs_Leagues" FromRole="Leagues" ToRole="Clubs" />
+          <NavigationProperty Name="Country" Relationship="Self.FK_Leagues_Countries" FromRole="Leagues" ToRole="Countries" />
+        </EntityType>
+        <EntityType Name="PlayerHasTitle">
+          <Key>
+            <PropertyRef Name="PlayerAndTitleID" />
+          </Key>
+          <Property Name="PlayerAndTitleID" Type="Int32" Nullable="false" />
+          <Property Name="PlayerID" Type="Int32" Nullable="false" />
+          <Property Name="TitleID" Type="Int32" Nullable="false" />
+          <Property Name="DateOfAcquisition" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Player" Relationship="Self.FK_PlayerHasTitle_Player" FromRole="PlayerHasTitle" ToRole="Players" />
+          <NavigationProperty Name="Title" Relationship="Self.FK_PlayerHasTitle_Title" FromRole="PlayerHasTitle" ToRole="Titles" />
+        </EntityType>
+        <EntityType Name="Player">
+          <Key>
+            <PropertyRef Name="PlayerID" />
+          </Key>
+          <Property Name="PlayerID" Type="Int32" Nullable="false" />
+          <Property Name="PlayerName" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ContractID" Type="Int32" />
+          <Property Name="HeightCM" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Contracts" Relationship="Self.FK_Contracts_Players" FromRole="Players" ToRole="Contracts" />
+          <NavigationProperty Name="PlayerHasTitles" Relationship="Self.FK_PlayerHasTitle_Player" FromRole="Players" ToRole="PlayerHasTitle" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Title">
+          <Key>
+            <PropertyRef Name="TitleID" />
+          </Key>
+          <Property Name="TitleID" Type="Int32" Nullable="false" />
+          <Property Name="TitleName" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="FederationID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ClubHasTitles" Relationship="Self.FK_ClubHasTitle_Title" FromRole="Titles" ToRole="ClubHasTitle" />
+          <NavigationProperty Name="Federation" Relationship="Self.FK_Titles_Federation" FromRole="Titles" ToRole="Federations" />
+          <NavigationProperty Name="PlayerHasTitles" Relationship="Self.FK_PlayerHasTitle_Title" FromRole="Titles" ToRole="PlayerHasTitle" />
+        </EntityType>
+        <Association Name="FK_ClubHasTitle_Club">
+          <End Role="Clubs" Type="Self.Club" Multiplicity="1" />
+          <End Role="ClubHasTitle" Type="Self.ClubHasTitle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clubs">
+              <PropertyRef Name="ClubID" />
+            </Principal>
+            <Dependent Role="ClubHasTitle">
+              <PropertyRef Name="ClubID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClubHasTitle_Title">
+          <End Role="Titles" Type="Self.Title" Multiplicity="1" />
+          <End Role="ClubHasTitle" Type="Self.ClubHasTitle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Titles">
+              <PropertyRef Name="TitleID" />
+            </Principal>
+            <Dependent Role="ClubHasTitle">
+              <PropertyRef Name="TitleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Clubs_Leagues">
+          <End Role="Leagues" Type="Self.League" Multiplicity="1" />
+          <End Role="Clubs" Type="Self.Club" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Leagues">
+              <PropertyRef Name="LeagueID" />
+            </Principal>
+            <Dependent Role="Clubs">
+              <PropertyRef Name="LeagueID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contracts_Clubs">
+          <End Role="Clubs" Type="Self.Club" Multiplicity="1" />
+          <End Role="Contracts" Type="Self.Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clubs">
+              <PropertyRef Name="ClubID" />
+            </Principal>
+            <Dependent Role="Contracts">
+              <PropertyRef Name="ClubID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contracts_Players">
+          <End Role="Players" Type="Self.Player" Multiplicity="1" />
+          <End Role="Contracts" Type="Self.Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Players">
+              <PropertyRef Name="PlayerID" />
+            </Principal>
+            <Dependent Role="Contracts">
+              <PropertyRef Name="PlayerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Leagues_Countries">
+          <End Role="Countries" Type="Self.Country" Multiplicity="1" />
+          <End Role="Leagues" Type="Self.League" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Countries">
+              <PropertyRef Name="CountryID" />
+            </Principal>
+            <Dependent Role="Leagues">
+              <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Titles_Federation">
+          <End Role="Federations" Type="Self.Federation" Multiplicity="1" />
+          <End Role="Titles" Type="Self.Title" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Federations">
+              <PropertyRef Name="FederationID" />
+            </Principal>
+            <Dependent Role="Titles">
+              <PropertyRef Name="FederationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PlayerHasTitle_Player">
+          <End Role="Players" Type="Self.Player" Multiplicity="1" />
+          <End Role="PlayerHasTitle" Type="Self.PlayerHasTitle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Players">
+              <PropertyRef Name="PlayerID" />
+            </Principal>
+            <Dependent Role="PlayerHasTitle">
+              <PropertyRef Name="PlayerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PlayerHasTitle_Title">
+          <End Role="Titles" Type="Self.Title" Multiplicity="1" />
+          <End Role="PlayerHasTitle" Type="Self.PlayerHasTitle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Titles">
+              <PropertyRef Name="TitleID" />
+            </Principal>
+            <Dependent Role="PlayerHasTitle">
+              <PropertyRef Name="TitleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DBFClubsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ClubHasTitles" EntityType="Self.ClubHasTitle" />
+          <EntitySet Name="Clubs" EntityType="Self.Club" />
+          <EntitySet Name="Contracts" EntityType="Self.Contract" />
+          <EntitySet Name="Countries" EntityType="Self.Country" />
+          <EntitySet Name="Federations" EntityType="Self.Federation" />
+          <EntitySet Name="Leagues" EntityType="Self.League" />
+          <EntitySet Name="PlayerHasTitles" EntityType="Self.PlayerHasTitle" />
+          <EntitySet Name="Players" EntityType="Self.Player" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="Titles" EntityType="Self.Title" />
+          <AssociationSet Name="FK_ClubHasTitle_Club" Association="Self.FK_ClubHasTitle_Club">
+            <End Role="Clubs" EntitySet="Clubs" />
+            <End Role="ClubHasTitle" EntitySet="ClubHasTitles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClubHasTitle_Title" Association="Self.FK_ClubHasTitle_Title">
+            <End Role="Titles" EntitySet="Titles" />
+            <End Role="ClubHasTitle" EntitySet="ClubHasTitles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Clubs_Leagues" Association="Self.FK_Clubs_Leagues">
+            <End Role="Leagues" EntitySet="Leagues" />
+            <End Role="Clubs" EntitySet="Clubs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contracts_Clubs" Association="Self.FK_Contracts_Clubs">
+            <End Role="Clubs" EntitySet="Clubs" />
+            <End Role="Contracts" EntitySet="Contracts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contracts_Players" Association="Self.FK_Contracts_Players">
+            <End Role="Players" EntitySet="Players" />
+            <End Role="Contracts" EntitySet="Contracts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Leagues_Countries" Association="Self.FK_Leagues_Countries">
+            <End Role="Countries" EntitySet="Countries" />
+            <End Role="Leagues" EntitySet="Leagues" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Titles_Federation" Association="Self.FK_Titles_Federation">
+            <End Role="Federations" EntitySet="Federations" />
+            <End Role="Titles" EntitySet="Titles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PlayerHasTitle_Player" Association="Self.FK_PlayerHasTitle_Player">
+            <End Role="Players" EntitySet="Players" />
+            <End Role="PlayerHasTitle" EntitySet="PlayerHasTitles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PlayerHasTitle_Title" Association="Self.FK_PlayerHasTitle_Title">
+            <End Role="Titles" EntitySet="Titles" />
+            <End Role="PlayerHasTitle" EntitySet="PlayerHasTitles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBFClubsModelStoreContainer" CdmEntityContainer="DBFClubsEntities">
+          <EntitySetMapping Name="ClubHasTitles">
+            <EntityTypeMapping TypeName="DBFClubsModel.ClubHasTitle">
+              <MappingFragment StoreEntitySet="ClubHasTitle">
+                <ScalarProperty Name="ClubAndTitleID" ColumnName="ClubAndTitleID" />
+                <ScalarProperty Name="ClubID" ColumnName="ClubID" />
+                <ScalarProperty Name="TitleID" ColumnName="TitleID" />
+                <ScalarProperty Name="DateOfAcquisition" ColumnName="DateOfAcquisition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clubs">
+            <EntityTypeMapping TypeName="DBFClubsModel.Club">
+              <MappingFragment StoreEntitySet="Clubs">
+                <ScalarProperty Name="ClubID" ColumnName="ClubID" />
+                <ScalarProperty Name="ClubName" ColumnName="ClubName" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="YearOfFoundation" ColumnName="YearOfFoundation" />
+                <ScalarProperty Name="LeagueID" ColumnName="LeagueID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contracts">
+            <EntityTypeMapping TypeName="DBFClubsModel.Contract">
+              <MappingFragment StoreEntitySet="Contracts">
+                <ScalarProperty Name="ContractID" ColumnName="ContractID" />
+                <ScalarProperty Name="ClubID" ColumnName="ClubID" />
+                <ScalarProperty Name="PlayerID" ColumnName="PlayerID" />
+                <ScalarProperty Name="ValidUntill" ColumnName="ValidUntill" />
+                <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+                <ScalarProperty Name="AnnualSalary" ColumnName="AnnualSalary" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Countries">
+            <EntityTypeMapping TypeName="DBFClubsModel.Country">
+              <MappingFragment StoreEntitySet="Countries">
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="Countryname" ColumnName="Countryname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Federations">
+            <EntityTypeMapping TypeName="DBFClubsModel.Federation">
+              <MappingFragment StoreEntitySet="Federations">
+                <ScalarProperty Name="FederationID" ColumnName="FederationID" />
+                <ScalarProperty Name="FederationName" ColumnName="FederationName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Leagues">
+            <EntityTypeMapping TypeName="DBFClubsModel.League">
+              <MappingFragment StoreEntitySet="Leagues">
+                <ScalarProperty Name="LeagueID" ColumnName="LeagueID" />
+                <ScalarProperty Name="LeagueName" ColumnName="LeagueName" />
+                <ScalarProperty Name="LeagueLevel" ColumnName="LeagueLevel" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="NumberOfCLPlaces" ColumnName="NumberOfCLPlaces" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PlayerHasTitles">
+            <EntityTypeMapping TypeName="DBFClubsModel.PlayerHasTitle">
+              <MappingFragment StoreEntitySet="PlayerHasTitle">
+                <ScalarProperty Name="PlayerAndTitleID" ColumnName="PlayerAndTitleID" />
+                <ScalarProperty Name="PlayerID" ColumnName="PlayerID" />
+                <ScalarProperty Name="TitleID" ColumnName="TitleID" />
+                <ScalarProperty Name="DateOfAcquisition" ColumnName="DateOfAcquisition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Players">
+            <EntityTypeMapping TypeName="DBFClubsModel.Player">
+              <MappingFragment StoreEntitySet="Players">
+                <ScalarProperty Name="PlayerID" ColumnName="PlayerID" />
+                <ScalarProperty Name="PlayerName" ColumnName="PlayerName" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="ContractID" ColumnName="ContractID" />
+                <ScalarProperty Name="HeightCM" ColumnName="HeightCM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="DBFClubsModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Titles">
+            <EntityTypeMapping TypeName="DBFClubsModel.Title">
+              <MappingFragment StoreEntitySet="Titles">
+                <ScalarProperty Name="TitleID" ColumnName="TitleID" />
+                <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+                <ScalarProperty Name="FederationID" ColumnName="FederationID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
