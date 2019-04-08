@@ -37,7 +37,7 @@ namespace ISTTP_Lab2
             }
             if (minTrackBar.Value < maxTrackBar.Value)
             {
-                query = query.Where(c => Convert.ToInt32(c.YearOfFoundation) > minTrackBar.Value && Convert.ToInt32(c.YearOfFoundation) < maxTrackBar.Value);
+                query = query.Where(c => c.YearOfFoundation > minTrackBar.Value && c.YearOfFoundation < maxTrackBar.Value);
             }
             query.Load();
             source.DataSource = ctx_club.Clubs.Local.ToBindingList();

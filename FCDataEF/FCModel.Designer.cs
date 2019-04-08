@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\rezik\source\repos\ISTTP_Lab2\FCDataEF\ModelFC.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\rezik\source\repos\ISTTP_Lab2\FCDataEF\FCModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

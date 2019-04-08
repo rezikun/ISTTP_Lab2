@@ -22,7 +22,7 @@
           <Property Name="ClubName" Type="nchar" MaxLength="30" Nullable="false" />
           <Property Name="Location" Type="nchar" MaxLength="20" Nullable="false" />
           <Property Name="Description" Type="nvarchar(max)" />
-          <Property Name="YearOfFoundation" Type="nchar" MaxLength="10" />
+          <Property Name="YearOfFoundation" Type="int" />
           <Property Name="LeagueID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Contracts">
@@ -277,7 +277,7 @@
           <Property Name="ClubName" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Location" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="YearOfFoundation" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="YearOfFoundation" Type="Int32" />
           <Property Name="LeagueID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="ClubHasTitles" Relationship="Self.FK_ClubHasTitle_Club" FromRole="Clubs" ToRole="ClubHasTitle" />
           <NavigationProperty Name="League" Relationship="Self.FK_Clubs_Leagues" FromRole="Clubs" ToRole="Leagues" />

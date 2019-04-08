@@ -52,79 +52,77 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Club.cs">
-      <DependentUpon>ModelFC.tt</DependentUpon>
+      <DependentUpon>FCModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ClubHasTitle.cs">
-      <DependentUpon>ModelFC.tt</DependentUpon>
+      <DependentUpon>FCModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Contract.cs">
-      <DependentUpon>ModelFC.tt</DependentUpon>
+      <DependentUpon>FCModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Country.cs">
-      <DependentUpon>ModelFC.tt</DependentUpon>
+      <DependentUpon>FCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FCModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FCModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FCModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Federation.cs">
-      <DependentUpon>ModelFC.tt</DependentUpon>
+      <DependentUpon>FCModel.tt</DependentUpon>
     </Compile>
     <Compile Include="League.cs">
-      <DependentUpon>ModelFC.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelFC.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelFC.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelFC.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelFC.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelFC.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelFC.edmx</DependentUpon>
+      <DependentUpon>FCModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Player.cs">
-      <DependentUpon>ModelFC.tt</DependentUpon>
+      <DependentUpon>FCModel.tt</DependentUpon>
     </Compile>
     <Compile Include="PlayerHasTitle.cs">
-      <DependentUpon>ModelFC.tt</DependentUpon>
+      <DependentUpon>FCModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sysdiagram.cs">
-      <DependentUpon>ModelFC.tt</DependentUpon>
+      <DependentUpon>FCModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Title.cs">
-      <DependentUpon>ModelFC.tt</DependentUpon>
+      <DependentUpon>FCModel.tt</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="ModelFC.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelFC.Designer.cs</LastGenOutput>
-    </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <None Include="ModelFC.edmx.diagram">
-      <DependentUpon>ModelFC.edmx</DependentUpon>
+    <EntityDeploy Include="FCModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FCModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="FCModel.edmx.diagram">
+      <DependentUpon>FCModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ModelFC.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModelFC.Context.cs</LastGenOutput>
-      <DependentUpon>ModelFC.edmx</DependentUpon>
-    </Content>
-    <Content Include="ModelFC.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelFC.edmx</DependentUpon>
-      <LastGenOutput>ModelFC.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="FCModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FCModel.edmx</DependentUpon>
+      <LastGenOutput>FCModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="FCModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FCModel.edmx</DependentUpon>
+      <LastGenOutput>FCModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

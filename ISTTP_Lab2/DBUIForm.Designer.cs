@@ -56,6 +56,7 @@
             this.playerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabClubs = new System.Windows.Forms.TabPage();
+            this.clubsSearchBtn = new System.Windows.Forms.Button();
             this.deleteClubBtn = new System.Windows.Forms.Button();
             this.saveClubBtn = new System.Windows.Forms.Button();
             this.dGVClubs = new System.Windows.Forms.DataGridView();
@@ -83,7 +84,6 @@
             this.clubsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.leagueIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clubsSearchBtn = new System.Windows.Forms.Button();
             this.tabTitles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVTitles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.federationBindingSource)).BeginInit();
@@ -295,6 +295,13 @@
             this.tabClubs.Name = "tabClubs";
             this.tabClubs.UseVisualStyleBackColor = true;
             // 
+            // clubsSearchBtn
+            // 
+            resources.ApplyResources(this.clubsSearchBtn, "clubsSearchBtn");
+            this.clubsSearchBtn.Name = "clubsSearchBtn";
+            this.clubsSearchBtn.UseVisualStyleBackColor = true;
+            this.clubsSearchBtn.Click += new System.EventHandler(this.clubsSearchBtn_Click_2);
+            // 
             // deleteClubBtn
             // 
             resources.ApplyResources(this.deleteClubBtn, "deleteClubBtn");
@@ -498,17 +505,11 @@
             resources.ApplyResources(this.leagueIDDataGridViewTextBoxColumn1, "leagueIDDataGridViewTextBoxColumn1");
             this.leagueIDDataGridViewTextBoxColumn1.Name = "leagueIDDataGridViewTextBoxColumn1";
             // 
-            // clubsSearchBtn
-            // 
-            resources.ApplyResources(this.clubsSearchBtn, "clubsSearchBtn");
-            this.clubsSearchBtn.Name = "clubsSearchBtn";
-            this.clubsSearchBtn.UseVisualStyleBackColor = true;
-            this.clubsSearchBtn.Click += new System.EventHandler(this.clubsSearchBtn_Click_2);
-            // 
             // DBUIForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ISTTP_Lab2.Properties.Resources.depositphotos_138419986_stock_illustration_seamless_pattern_with_soccer_balls;
             this.Controls.Add(this.mainTabControl);
             this.Name = "DBUIForm";
             this.Load += new System.EventHandler(this.DBUIForm_Load);

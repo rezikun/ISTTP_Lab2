@@ -25,7 +25,7 @@ namespace FCDataEF
         public string ClubName { get; set; }
         public string Location { get; set; }
         public string Description { get; set; }
-        public string YearOfFoundation { get; set; }
+        public Nullable<int> YearOfFoundation { get; set; }
         public int LeagueID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
