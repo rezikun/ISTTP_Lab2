@@ -16,7 +16,12 @@ namespace ISTTP_Lab2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DBUIForm());
+            AuthorizationForm authorizationForm = new AuthorizationForm();
+            Application.Run(authorizationForm);
+            if(authorizationForm.success)
+            {
+                Application.Run(new DBUIForm());
+            }
         }
     }
 }

@@ -17,6 +17,7 @@ namespace ISTTP_Lab2
         private FCDataEF.DBFClubsEntities ctx;
         public DBUIForm()
         {
+
             InitializeComponent();
         }
 
